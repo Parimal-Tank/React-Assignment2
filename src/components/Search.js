@@ -38,7 +38,7 @@ const Search = () => {
     loadData();
   }, []);
 
-  
+
   const onSuggestHandler = (text) => {
     setText(text);
 
@@ -161,8 +161,7 @@ const Search = () => {
             >
               {platform &&
                 platform.map((element) => {
-                  console.log("element: ", element);
-
+                 
                   return (
                     <MenuItem key={element} value={element}>
                       {element}
