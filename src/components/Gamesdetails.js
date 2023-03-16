@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
+
 import { Table } from "reactstrap";
 
 const Gamesdetails = (props) => {
-const {data}= props
+  const { data } = props;
 
-console.log(data)  
-
-// console.log("This is Total Data", props.data)
-
-// console.log('This is Search Data', props.searchData);
-
-  const tableRows = data && data.map((element, index) => {
-
+  const tableRows =
+    data &&
+    data.map((element, index) => {
       return (
-        <tr>
-          <td>{index}</td>
+        <tr key={index+1}>
+          <td>{index +1}</td>
           <td>{element.title}</td>
           <td>{element.platform}</td>
           <td>{element.genre}</td>
@@ -23,9 +18,7 @@ console.log(data)
           <td>{element.score}</td>
         </tr>
       );
-  });
-
-
+    });
 
   return (
     <div className="container table">
@@ -40,14 +33,10 @@ console.log(data)
             <th>Score</th>
           </tr>
         </thead>
-        <tbody>
-          {/* {searchedData && searchedData.length > 0 ? searchedData : tableRows} */}
-          {tableRows}
-        </tbody>
+        <tbody>{tableRows}</tbody>
       </Table>
     </div>
   );
 };
 
 export default Gamesdetails;
-
