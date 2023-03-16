@@ -1,12 +1,12 @@
 .table{
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 .main {
   display: flex;
   margin-bottom: 50px;
   width: 100%;
-  align-items: center;
+
   flex-direction: column;
   row-gap: 20px;
 }
@@ -20,7 +20,6 @@ h1 {
 .search {
   position: absolute;
   top: 100px;
-  width: 50%;
 }
 
 ul li {
@@ -43,6 +42,16 @@ ul li {
 
 .search-decoration{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.platform-dropdown{
+  display: flex;
+  justify-content: end;
+   margin-top: 125px;
+}
+
+.dropdown-value{
+   width: 200px;
 }
 
 
